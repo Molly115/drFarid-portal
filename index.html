@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Portal | Dr. Farid</title>
+  <style>
+    /* ========== THEME & VARIABLES ========== */
+    :root {
+      --primary: #183aa8;
+      --secondary: #2f55d4;
+      --bg: #f4f7ff;
+      --white: #ffffff;
+      --text: #1e293b;
+      --accent: #ffde59;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ========== NAVIGATION ========== */
+    .navbar {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
+      padding: 15px 50px;
+      border-bottom: 1px solid #c7d4ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .nav-left { display: flex; align-items: center; gap: 15px; }
+    .logo { width: 40px; height: 40px; border-radius: 8px; }
+
+    /* ========== PROFILE HEADER ========== */
+    .profile-section {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 80px 10% 120px; /* Increased bottom padding */
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      position: relative;
+      /* Subtle clip path that doesn't interfere with text below */
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    }
+
+    .doctor-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid rgba(255,255,255,0.2);
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .profile-text h1 { font-size: 3rem; margin: 0; }
+    .profile-text p { font-size: 1.1rem; opacity: 0.9; max-width: 650px; line-height: 1.5; }
+    
+    .stats-strip {
+      display: flex;
+      gap: 20px;
+      margin-top: 25px;
+    }
+    .mini-stat {
+      background: rgba(255,255,255,0.15);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ========== MAIN LAYOUT ========== */
+    .dashboard-container {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 40px;
+      width: 90%;
+      max-width: 1400px;
+      margin: 40px auto 80px; /* Removed negative margin to prevent overlap */
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ========== COURSE GRID ========== */
+    .year-block { margin-bottom: 60px; }
+    
+    /* Fixed the readability of this title */
+    .year-title { 
+      font-size: 26px; 
+      color: var(--primary); 
+      margin-bottom: 30px; 
+      display: flex; 
+      align-items: center; 
+      gap: 15px;
+      font-weight: 700;
+    }
+    .year-title::after { 
+      content: ""; 
+      flex: 1; 
+      height: 2px; 
+      background: linear-gradient(to right, #c7d4ff, transparent); 
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+    }
+
+    .course-card {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 30px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(31, 78, 216, 0.12);
+      border-color: var(--secondary);
+    }
+
+    .course-card span { font-size: 11px; color: var(--secondary); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+    .course-card h3 { margin: 15px 0; font-size: 19px; color: var(--text); line-height: 1.4; }
+
+    /* ========== SIDEBAR UTILITIES ========== */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    .side-panel {
+      background: white;
+      border-radius: 24px;
+      padding: 30px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    }
+    .side-panel h4 { margin: 0 0 20px 0; color: var(--primary); font-size: 1.1rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; }
+    
+    .tool-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+      text-decoration: none;
+      color: var(--text);
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .tool-link:hover { background: var(--bg); color: var(--secondary); transform: translateX(5px); }
+
+    .sticky-note {
+      background: var(--accent);
+      border-radius: 24px;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+    .sticky-note::before {
+      content: "";
+      position: absolute;
+      top: 0; right: 0;
+      width: 40px; height: 40px;
+      background: rgba(0,0,0,0.05);
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+    }
+
+    .footer { padding: 50px; text-align: center; color: #94a3b8; font-size: 0.9rem; background: #fff; border-top: 1px solid #e2e8f0; margin-top: 40px;}
+
+    @media (max-width: 1100px) {
+      .dashboard-container { grid-template-columns: 1fr; width: 95%; }
+      .profile-section { flex-direction: column; text-align: center; padding: 60px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <h2 style="font-size: 1.2rem;">Doctor Farid | Portal</h2>
+  </div>
+  <div class="nav-right">
+    <div style="background: #eef2ff; padding: 8px 15px; border-radius: 8px; font-size: 0.85rem; font-weight: 600; color: var(--primary);">
+      Academic Session 2025-2026
+    </div>
+  </div>
+</nav>
+
+<header class="profile-section">
+  <img src="drfarid.jpg" alt="Dr. Farid" class="doctor-photo">
+  <div class="profile-text">
+    <h1>Dr. Farid</h1>
+    <p>Senior Professor specializing in <strong>Digital Law</strong>, <strong>Economics Management</strong>, and <strong>Strategic Communication</strong>. Dedicated to bridging the gap between legal theory and digital innovation.</p>
+    <div class="stats-strip">
+      <div class="mini-stat"><b>7</b> Active Modules</div>
+      <div class="mini-stat"><b>250+</b> Enrolled Students</div>
+      <div class="mini-stat"><b>15</b> Years Experience</div>
+    </div>
+  </div>
+</header>
+
+<main class="dashboard-container">
+  
+  <div class="main-content">
+    
+    <div class="year-block">
+      <h2 class="year-title">First Year Modules</h2>
+      <div class="course-grid">
+        <a href="#" class="course-card">
+          <div><span>LAS 2.02 • SEM 2</span><h3>Design a product or services and its communication</h3></div>
+          <div style="color: var(--secondary); font-weight:700; margin-top:20px; font-size: 0.9rem;">View Curriculum →</div>
+        </a>
+        <a href="#" class="course-card">
+          <div><span>R 1.17 • SEM 1</span><h3>Personal and Professional Project</h3></div>
+          <div style="color: var(--secondary); font-weight:700; margin-top:20px; font-size: 0.9rem;">View Curriculum →</div>
+        </a>
+        <a href="#" class="course-card">
+          <div><span>R 2.19 • SEM 2</span><h3>Personal and Professional Project</h3></div>
+          <div style="color: var(--secondary); font-weight:700; margin-top:20px; font-size: 0.9rem;">View Curriculum →</div>
+        </a>
+        <a href="#" class="course-card">
+          <div><span>R 1.15 • SEM 1</span><h3>Project Management</h3></div>
+          <div style="color: var(--secondary); font-weight:700; margin-top:20px; font-size: 0.9rem;">View Curriculum →</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="year-block">
+      <h2 class="year-title">Second Year Modules</h2>
+      <div class="course-grid">
+        <a href="economics_course.html" class="course-card">
+          <div><span>R 4.02 • SEM 2</span><h3>Economics management and digital law</h3></div>
+          <div style="color: var(--secondary); font-weight:700; margin-top:20px; font-size: 0.9rem;">Launch Course Hub →</div>
+        </a>
+        <a href="#" class="course-card">
+          <div><span>R 3.18 • SEM 1</span><h3>Personal and Professional Project</h3></div>
+          <div style="color: var(--secondary); font-weight:700; margin-top:20px; font-size: 0.9rem;">View Curriculum →</div>
+        </a>
+        <a href="#" class="course-card">
+          <div><span>R 3.16 • SEM 1</span><h3>Project Management</h3></div>
+          <div style="color: var(--secondary); font-weight:700; margin-top:20px; font-size: 0.9rem;">View Curriculum →</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <aside class="sidebar">
+    <div class="side-panel">
+      <h4>Faculty Management</h4>
+      <a href="#" class="tool-link">📅 Teaching Schedule</a>
+      <a href="#" class="tool-link">📝 Grading & Rubrics</a>
+      <a href="#" class="tool-link">📩 Student Messages</a>
+      <a href="#" class="tool-link">📂 Research Archive</a>
+    </div>
+
+    <div class="sticky-note">
+      <h4 style="margin: 0 0 10px 0; color: #554400; font-size: 1rem;">Digital Memo</h4>
+      <p style="font-size: 0.9rem; color: #776611; font-weight: 600; line-height: 1.4;">Finalize the Economics MCQ by Thursday morning. Check project submissions for Section 02.</p>
+    </div>
+
+    <div class="side-panel">
+      <h4>Recent Activity</h4>
+      <ul style="padding: 0; list-style: none; font-size: 0.85rem; color: #64748b;">
+        <li style="margin-bottom: 12px; display: flex; gap: 10px;">• <span><b>12</b> Project uploads in R 4.02</span></li>
+        <li style="margin-bottom: 12px; display: flex; gap: 10px;">• <span>Exam schedule updated</span></li>
+        <li style="display: flex; gap: 10px;">• <span>New research request</span></li>
+      </ul>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="footer">
+  &copy; 2026 University Digital Marketing Faculty | Developed for Dr. Farid
+</footer>
+
+</body>
+</html>
