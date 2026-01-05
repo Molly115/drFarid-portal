@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPP Masterclass 02: Professional Toolkit & Media</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #2563eb;
+      --accent: #10b981; /* Green for "Tools/Construction" */
+      --text: #1e293b;
+      --light-bg: #f8fafc;
+    }
+
+    body {
+      margin: 0; font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg); color: var(--text); line-height: 1.8;
+    }
+
+    /* HEADER */
+    .hero {
+      height: 50vh;
+      background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                  url('https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1600') center/cover fixed;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      color: white; text-align: center; padding: 40px;
+    }
+
+    .hero h1 { font-size: 3rem; margin: 0; border-bottom: 5px solid var(--accent); padding-bottom: 10px; }
+    .hero p { font-size: 1.2rem; max-width: 850px; margin-top: 20px; opacity: 0.9; }
+
+    /* CONTENT LAYOUT */
+    .container { max-width: 1100px; margin: -60px auto 100px; padding: 0 20px; }
+
+    .lecture-card {
+      background: white; border-radius: 30px; padding: 60px;
+      margin-bottom: 50px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+    }
+
+    h2 { font-size: 2.1rem; color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 15px; }
+    h2::before { content: "🛠️"; }
+    
+    h3 { color: var(--secondary); font-size: 1.5rem; margin-top: 40px; }
+
+    .toolkit-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;
+    }
+
+    .tool-item {
+      background: #f0fdf4; border: 1px solid #bbf7d0; padding: 25px; border-radius: 15px;
+    }
+
+    .tool-item b { color: var(--accent); display: block; margin-bottom: 8px; font-size: 1.2rem; }
+
+    .branding-box {
+      background: #eff6ff; border-radius: 20px; padding: 35px;
+      margin: 40px 0; border: 1px dashed var(--secondary);
+    }
+
+    .checklist-list {
+      list-style: none; padding: 0;
+    }
+    .checklist-list li {
+      background: #ffffff; margin-bottom: 10px; padding: 15px 20px; border-radius: 10px;
+      display: flex; align-items: center; gap: 15px; border: 1px solid #e2e8f0;
+    }
+    .checklist-list li::before { content: "✅"; }
+
+    footer { background: #0f172a; color: white; padding: 40px; text-align: center; }
+
+    @media (max-width: 850px) { .hero h1 { font-size: 2rem; } .lecture-card { padding: 30px; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Lecture 03: Professional Toolkit & Media</h1>
+    <p>Creating your Professional Arsenal: The CV, Cover Letter, E-Portfolio, and Networking Media.</p>
+  </header>
+
+  <div class="container">
+
+    <section class="lecture-card">
+      <h2>I. The Job-Hunting Duo: CV & Cover Letter</h2>
+      <p>In the French and European job markets, your CV is your <strong>Data Sheet</strong> and your Cover Letter is your <strong>Narrative</strong>. They must work together without repeating each other.</p>
+      
+      
+
+      <h3>1. The Modern CV (Curriculum Vitae)</h3>
+      <p>A professional CV in 2026 must be "ATS Friendly" (Applicant Tracking Systems) but visually engaging for human eyes. Key elements include:</p>
+      <ul class="checklist-list">
+        <li><strong>Professional Headline:</strong> Not just "Student," but "Aspiring Digital Marketer | B.U.T. Specialty."</li>
+        <li><strong>Skill Blocks:</strong> Categorizing by Savoirs, Savoir-faire, and Savoir-être.</li>
+        <li><strong>Experience-Results:</strong> Using the <em>Action Verbs + Data</em> formula (e.g., "Increased social engagement by 20%").</li>
+      </ul>
+
+      <h3>2. The Tailored Cover Letter (LM)</h3>
+      <p>Avoid generic templates. A strong letter follows the <strong>YOU - ME - US</strong> structure:</p>
+      <ul>
+        <li><strong>YOU:</strong> What do I admire about your company? (The Hook)</li>
+        <li><strong>ME:</strong> What skills do I have that solve your specific problems?</li>
+        <li><strong>US:</strong> What can we achieve together in an internship or work-study program?</li>
+      </ul>
+    </section>
+
+    <section class="lecture-card">
+      <h2>II. The E-Portfolio & Digital Identity</h2>
+      <p>For communication and design students, saying "I can do it" is not enough. You must <strong>show</strong> it. An E-Portfolio is a living archive of your skills.</p>
+
+      <div class="branding-box">
+        <strong>The E-Portfolio Cycle:</strong> Collect (Work) → Select (Best Pieces) → Reflect (What I learned) → Connect (Share with recruiters).
+      </div>
+
+      
+
+      <h3>1. Use of Professional Social Networks (LinkedIn)</h3>
+      <p>Your LinkedIn is your 24/7 billboard. To master it, you must:</p>
+      <ul>
+        <li><strong>Optimize the Profile:</strong> Professional headshot, keyword-rich "About" section, and featured projects.</li>
+        <li><strong>Strategic Monitoring:</strong> Setting up a "Digital Watch" to follow companies and trends in your region.</li>
+        <li><strong>Engagement:</strong> Commenting on industry news to build "Social Currency."</li>
+      </ul>
+    </section>
+
+    <section class="lecture-card">
+      <h2>III. Networking Tools & The Pitch</h2>
+      <p>Networking is the process of building a "Network Card." It is about being remembered for the right reasons.</p>
+      
+      <div class="toolkit-grid">
+        <div class="tool-item">
+          <b>The Business Card</b>
+          <p>Even in a digital age, a physical or digital (QR code) business card creates a "tactile" memory during visits to incubators or Fab Labs.</p>
+        </div>
+        <div class="tool-item">
+          <b>The "Network Card"</b>
+          <p>A document where you map your existing contacts: Professors, family, former colleagues, and industry leaders you've interviewed.</p>
+        </div>
+        <div class="tool-item">
+          <b>Formal & Informal Pitch</b>
+          <p>The "Elevator Pitch": Can you explain your career goal in 30 seconds to a CEO in an elevator?</p>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <section class="lecture-card">
+      <h2>IV. Codes, Customs & Cultural Diversity</h2>
+      <p>Success in a professional environment requires understanding <strong>Socio-Economic Globalization</strong> and European social codes.</p>
+      <ul>
+        <li><strong>Professional Etiquette:</strong> Email tone, punctuality, and dress codes for different industries (Agencies vs. Large Corps).</li>
+        <li><strong>Cultural Diversity:</strong> Adapting your communication when targeting international career paths (e.g., the difference between a French CV and a US Resume).</li>
+      </ul>
+      <p>By mastering these tools, you move from a student perspective to a <strong>Forward-Looking Career Perspective</strong>.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>R 1.17 • Module 02: Professional Toolkit</p>
+    <p>© 2026 Academic Portal • Dr. Farid Portfolio</p>
+  </footer>
+
+</body>
+</html>

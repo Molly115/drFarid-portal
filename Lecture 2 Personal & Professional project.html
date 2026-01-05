@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPP Masterclass: Personal Branding & E-Reputation</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #6366f1; /* Indigo for Digital/Tech */
+      --accent: #f43f5e; /* Rose for "Alert/Reputation" */
+      --text: #1e293b;
+      --light-bg: #f8fafc;
+    }
+
+    body {
+      margin: 0; font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg); color: var(--text); line-height: 1.8;
+    }
+
+    /* HEADER */
+    .hero {
+      height: 50vh;
+      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                  url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600') center/cover fixed;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      color: white; text-align: center; padding: 40px;
+    }
+
+    .hero h1 { font-size: 3rem; margin: 0; border-bottom: 5px solid var(--secondary); padding-bottom: 10px; }
+    .hero p { font-size: 1.2rem; max-width: 850px; margin-top: 20px; opacity: 0.9; }
+
+    /* CONTENT LAYOUT */
+    .container { max-width: 1100px; margin: -60px auto 100px; padding: 0 20px; }
+
+    .lecture-card {
+      background: white; border-radius: 30px; padding: 60px;
+      margin-bottom: 50px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+    }
+
+    h2 { font-size: 2.1rem; color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 15px; }
+    h2::before { content: "🌐"; }
+    
+    h3 { color: var(--secondary); font-size: 1.5rem; margin-top: 40px; }
+
+    .branding-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;
+    }
+
+    .branding-item {
+      background: #f5f3ff; border: 1px solid #ddd6fe; padding: 25px; border-radius: 15px;
+    }
+
+    .branding-item b { color: var(--secondary); display: block; margin-bottom: 8px; font-size: 1.2rem; }
+
+    .warning-box {
+      background: #fff1f2; border-left: 8px solid var(--accent);
+      padding: 30px; margin: 40px 0; border-radius: 0 20px 20px 0;
+    }
+
+    .watch-step {
+      display: flex; align-items: flex-start; gap: 20px; margin-bottom: 25px;
+    }
+    .step-icon {
+      background: var(--primary); color: white; min-width: 35px; height: 35px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;
+    }
+
+    footer { background: #0f172a; color: white; padding: 40px; text-align: center; }
+
+    @media (max-width: 850px) { .hero h1 { font-size: 2rem; } .lecture-card { padding: 30px; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Lecture 02: Personal Branding & E-Reputation</h1>
+    <p>The Digital Identity Strategy: Controlling your professional image and setting up a digital watch system.</p>
+  </header>
+
+  <div class="container">
+
+    <section class="lecture-card">
+      <h2>I. Understanding the E-Reputation Cycle</h2>
+      <p>E-Reputation is the perception that internet users have of you, based on the traces you leave behind. It is a mix of <strong>Personal Identity</strong> (who you say you are) and <strong>Digital Footprint</strong> (what others find when they search for you).</p>
+      
+      
+
+      <h3>1. The Issues & Risks</h3>
+      <p>In the digital age, your reputation is "permanent, searchable, and replicable." One unprofessional post from five years ago can disrupt a career goal today.</p>
+      
+      <div class="warning-box">
+        <strong>The "Google Test":</strong> 70% of recruiters admit to rejecting candidates based on their social media content. If you aren't managing your image, Google's algorithm is managing it for you.
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>II. Key Steps in Personal Branding</h2>
+      <p>Personal Branding is the act of treating yourself as a brand. It is about <strong>differentiation</strong> and <strong>consistency</strong>.</p>
+
+      <div class="branding-grid">
+        <div class="branding-item">
+          <b>1. Defining the Core</b>
+          <p>What is your unique value proposition? What "skill block" do you want to be known for (e.g., The Creative Designer or The Data Strategist)?</p>
+        </div>
+        <div class="branding-item">
+          <b>2. Visual Identity</b>
+          <p>Using consistent professional headshots, color palettes, and typography across your LinkedIn, E-Portfolio, and CV.</p>
+        </div>
+        <div class="branding-item">
+          <b>3. Content Strategy</b>
+          <p>Sharing your expertise. It’s not just about "looking for a job," but about showing you are an active member of your professional community.</p>
+        </div>
+      </div>
+
+      
+    </section>
+
+    <section class="lecture-card">
+      <h2>III. Setting up a Digital Watch</h2>
+      <p>To control your image, you must monitor it. A "Digital Watch" (Veille Digitale) is an automated system that alerts you whenever your name or interest areas appear online.</p>
+      
+      <h3>The 3-Step Monitoring Setup:</h3>
+      <div class="watch-step">
+        <div class="step-icon">1</div>
+        <div>
+          <strong>Passive Monitoring:</strong> Use <em>Google Alerts</em> for your name and variations of it. This tells you immediately if you are being mentioned.
+        </div>
+      </div>
+      <div class="watch-step">
+        <div class="step-icon">2</div>
+        <div>
+          <strong>Active Monitoring:</strong> Using professional social networks (LinkedIn) to monitor industry trends and specific company catchment areas.
+        </div>
+      </div>
+      <div class="watch-step">
+        <div class="step-icon">3</div>
+        <div>
+          <strong>Privacy Audit:</strong> Regularly checking your social media privacy settings and removing "noise" (unprofessional tags or photos).
+        </div>
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>IV. Mastering Professional Social Networks</h2>
+      <p>Your LinkedIn profile is more than a CV; it is your <strong>Digital Identity Hub</strong>.</p>
+      <ul>
+        <li><strong>Headline Optimization:</strong> Use keywords that match the ROME files (professional standards) of your target job.</li>
+        <li><strong>Endorsements & Recommendations:</strong> Social proof that your "Savoir-faire" is real.</li>
+        <li><strong>Network Development:</strong> Building a "Network Card" by connecting with professionals you met during visits to Fab Labs or Incubators.</li>
+      </ul>
+      
+      
+
+      <p>By the end of this lecture, students will have a personal strategy to control their "Digital Shadow" and turn it into a <strong>Professional Asset</strong>.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>R 1.17 • Module 03: E-Reputation & Branding</p>
+    <p>© 2026 Academic Portal • Dr. Farid Portfolio</p>
+  </footer>
+
+</body>
+</html>

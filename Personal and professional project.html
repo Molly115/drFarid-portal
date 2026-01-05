@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>R 1.17 • Personal & Professional Project</title>
+  <style>
+    /* ========== GLOBAL & THEME ========== */
+    body { 
+      margin: 0; 
+      font-family: "Segoe UI", sans-serif; 
+      background: linear-gradient(180deg, #e9efff 0%, #dde6ff 100%); 
+      color: #1e293b; 
+    }
+
+    .navbar { 
+      background: rgba(245,248,255,0.95); 
+      backdrop-filter: blur(10px); 
+      padding: 18px 40px; 
+      border-bottom: 1px solid #c7d4ff; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-left { display: flex; align-items: center; gap: 15px; }
+    .logo { width: 42px; height: 42px; object-fit: contain; }
+    .navbar h2 { margin: 0; color: #183aa8; }
+
+    .hero { text-align: center; padding: 90px 20px 70px; }
+    .hero h1 { 
+      font-size: 44px; 
+      background: linear-gradient(90deg,#183aa8,#2f55d4); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+    }
+    .hero p { margin-top: 12px; color: #334155; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+    /* ========== TIMELINE LAYOUT ========== */
+    .block { width: 80%; margin: 0 auto 120px; }
+    .timeline { position: relative; }
+    .timeline::before { 
+      content: ""; 
+      position: absolute; 
+      left: 28px; 
+      top: 0; 
+      bottom: 0; 
+      width: 2px; 
+      background: linear-gradient(#1f4ed8, #5f8cff); 
+    }
+
+    .module { 
+      display: flex; 
+      gap: 40px; 
+      margin-bottom: 70px; 
+      position: relative; 
+      align-items: flex-start; 
+    }
+
+    .module-number { 
+      min-width: 60px; 
+      height: 60px; 
+      background: linear-gradient(135deg, #1f4ed8, #3f63ff); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: bold; 
+      color: #ffffff; 
+      box-shadow: 0 6px 14px rgba(31,78,216,0.45); 
+      font-size: 18px; 
+      z-index: 2;
+    }
+
+    .module-content { 
+      background: #f9fbff; 
+      border: 1px solid #c7d4ff; 
+      border-radius: 18px; 
+      padding: 30px; 
+      width: 100%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 30px; 
+      transition: transform 0.3s ease; 
+    }
+    .module-content:hover { 
+      transform: translateY(-6px); 
+      box-shadow: 0 14px 28px rgba(31,78,216,0.18); 
+    }
+
+    .module-text { flex: 1; }
+    .module-text h3 { margin-top: 0; color: #1e3a8a; font-size: 22px; }
+    .module-text p { margin-bottom: 0; color: #475569; font-size: 0.95rem; }
+
+    .module-btn { 
+      display: inline-block; 
+      padding: 12px 22px; 
+      background: linear-gradient(135deg, #1f4ed8, #3f63ff); 
+      color: #ffffff; 
+      border-radius: 10px; 
+      text-decoration: none; 
+      font-weight: 600; 
+      white-space: nowrap;
+    }
+
+    .footer { padding: 30px; text-align: center; background: #e4ebff; color: #334155; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/logo.jpeg" alt="Logo" class="logo">
+    <h2>R 1.17 • PPP Roadmap</h2>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Personal and Professional Project</h1>
+  <p>Self-discovery, Personal Branding, and Career Strategy: Build your digital identity and prepare for the international professional world.</p>
+</header>
+
+<section class="block">
+  <div class="timeline">
+
+    <div class="module">
+      <span class="module-number">01</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Self-Knowledge & Introspection</h3>
+          <p>Discovering your values, motivations, and aspirations. Mapping your "Savoir, Savoir-faire, and Savoir-être" through reflective experience analysis.</p>
+        </div>
+        <a href="Lecture 1 Personal & Professional Project.html" class="module-btn">Explore Self</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">02</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Personal Branding & E-Reputation</h3>
+          <p>Setting up a digital watch to control your image. Managing the e-reputation cycle, professional social networks, and personal branding strategy.</p>
+        </div>
+        <a href="Lecture 2 Personal & Professional project.html" class="module-btn">Build Brand</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">03</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Professional Toolkit & Media</h3>
+          <p>Creation of essential tools: CV, Cover Letter, Business Cards, and the start of your E-Portfolio. Mastering formal and informal pitches.</p>
+        </div>
+        <a href="Lecture 3 Personal and professional project.html" class="module-btn">Open Toolkit</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">04</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>The Innovation Ecosystem</h3>
+          <p>Visits and interviews with Fab Labs, incubators, and university innovation facilities. Discovering the regional company catchment areas.</p>
+        </div>
+        <a href="Lecture 4 Personal & Professional Project.html" class="module-btn">Visit Hubs</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">05</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Global Career Projection</h3>
+          <p>Analyzing B.U.T. pathways, ROME files, and international career paths. Integration of European social codes and network card development.</p>
+        </div>
+        <a href="Lecture 5 Personal & Professional Project.html" class="module-btn">Plan Future</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  PPP Course Material – Self-Reflection, Professional Identity & Regional Integration
+</footer>
+
+</body>
+</html>
