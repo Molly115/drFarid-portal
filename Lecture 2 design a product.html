@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masterclass 02: Digital Presence & CMS Development</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #2563eb;
+      --accent: #10b981; /* Green for "Development/Go" */
+      --text: #1e293b;
+      --light-bg: #f1f5f9;
+    }
+
+    body {
+      margin: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--light-bg); color: var(--text); line-height: 1.8;
+    }
+
+    /* HEADER */
+    .hero {
+      height: 55vh;
+      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                  url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600') center/cover fixed;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      color: white; text-align: center; padding: 40px;
+    }
+
+    .hero h1 { font-size: 3.2rem; margin: 0; border-bottom: 5px solid var(--accent); padding-bottom: 15px; }
+    .hero p { font-size: 1.2rem; max-width: 850px; margin-top: 20px; opacity: 0.9; }
+
+    /* CONTENT LAYOUT */
+    .container { max-width: 1100px; margin: -60px auto 100px; padding: 0 20px; }
+
+    .lecture-card {
+      background: white; border-radius: 30px; padding: 60px;
+      margin-bottom: 50px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+    }
+
+    h2 { font-size: 2.1rem; color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 15px; }
+    h2::before { content: "02"; font-size: 1rem; background: var(--accent); color: white; padding: 5px 12px; border-radius: 8px; }
+    
+    h3 { color: var(--secondary); font-size: 1.5rem; margin-top: 40px; }
+
+    .tech-stack {
+      display: flex; gap: 20px; margin: 30px 0; flex-wrap: wrap;
+    }
+
+    .tech-item {
+      background: #f8fafc; border: 1px solid #cbd5e1; padding: 15px 25px;
+      border-radius: 12px; font-weight: 600; color: var(--primary);
+    }
+
+    .workflow-box {
+      background: #f0fdf4; border: 1px solid #bbf7d0; padding: 30px;
+      border-radius: 20px; margin: 30px 0;
+    }
+
+    .doctor-sidebar {
+      background: #fffbeb; border-left: 8px solid #f59e0b;
+      padding: 30px; margin: 40px 0; border-radius: 0 20px 20px 0;
+    }
+
+    .ux-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px;
+    }
+
+    .ux-card {
+      background: #ffffff; border: 1px solid #e2e8f0; padding: 25px;
+      border-radius: 15px; transition: 0.3s;
+    }
+    .ux-card:hover { border-color: var(--secondary); transform: translateY(-5px); }
+
+    footer { background: #0f172a; color: white; padding: 40px; text-align: center; }
+
+    .code-snippet {
+      background: #1e293b; color: #38bdf8; padding: 20px; border-radius: 10px; font-family: monospace; overflow-x: auto;
+    }
+
+    @media (max-width: 850px) { .hero h1 { font-size: 2rem; } .lecture-card { padding: 30px; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Module 02: Digital Presence & CMS Development</h1>
+    <p>Constructing the Global Showcase Site: From Information Architecture to Professional Deployment</p>
+  </header>
+
+  <div class="container">
+
+    <section class="lecture-card">
+      <h2>I. Strategic Digital Presence</h2>
+      <p>A "Digital Presence" is not just a website; it is an ecosystem. For an SME or a tourism agency, the website acts as the **Central Hub**, while social networks act as the **Satellites** that drive traffic to the hub.</p>
+      
+      <div class="tech-stack">
+        <div class="tech-item">Domain (DNS)</div>
+        <div class="tech-item">Hosting</div>
+        <div class="tech-item">CMS Layer</div>
+        <div class="tech-item">SSL/Security</div>
+        <div class="tech-item">Analytics</div>
+      </div>
+
+      <h3>1. Defining the Showcase Website (Site Vitrine)</h3>
+      <p>Unlike an e-commerce site, a showcase site is designed to **convert interest into contact**. Its primary goals are:</p>
+      <ul>
+        <li>Establishing **Authority** and Professionalism.</li>
+        <li>Presenting the **Value Proposition** clearly.</li>
+        <li>Providing a clear **Call to Action (CTA)** (e.g., "Request a Quote", "Book a Consultation").</li>
+      </ul>
+    </section>
+
+    <section class="lecture-card">
+      <h2>II. CMS Selection & Architecture</h2>
+      <p>Choosing a Content Management System (CMS) is a critical business decision. In this course, we focus on tools that allow for **rapid deployment** and **easy maintenance** by non-technical SME staff.</p>
+
+      <div class="workflow-box">
+        <strong>The CMS Advantage:</strong> CMS tools decouple "Content" from "Code." This allows an agency to design the structure once, while the client (SME) can update texts and images without breaking the design.
+      </div>
+
+      
+
+      <h3>1. Popular Options for SMEs:</h3>
+      <ul>
+        <li><strong>WordPress:</strong> High flexibility, massive plugin ecosystem, but requires frequent security updates.</li>
+        <li><strong>Webflow/Wix Studio:</strong> High design control, "closed" hosting (more secure), excellent for visual storytelling.</li>
+        <li><strong>Shopify:</strong> Only if the "product" involves direct transaction.</li>
+      </ul>
+
+      <h3>2. Information Architecture (Sitemap)</h3>
+      <p>Before touching the CMS, you must build the sitemap. An international site usually follows this hierarchy:</p>
+      <div class="code-snippet">
+        Home > Services/Product > About Us > Case Studies/Gallery > Contact (Multilingual)
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>III. Designing for an International Target</h2>
+      <p>User Experience (UX) changes across borders. What a French user expects in terms of navigation may differ from an American or Asian user.</p>
+      
+      <div class="ux-grid">
+        <div class="ux-card">
+          <strong>Language Switching:</strong>
+          <p>Don't just use flags (flags represent countries, not languages). Use clear text like "English / Français".</p>
+        </div>
+        <div class="ux-card">
+          <strong>Loading Speed:</strong>
+          <p>International users may have different bandwidths. Optimization of images (WebP format) is non-negotiable.</p>
+        </div>
+        <div class="ux-card">
+          <strong>Mobile-First:</strong>
+          <p>In many international markets, the primary device is the smartphone. The site MUST be responsive.</p>
+        </div>
+      </div>
+
+      
+
+      <div class="doctor-sidebar">
+        <strong>Dr. Farid's Technical Tip:</strong> "In the SME world, speed equals trust. A site that takes more than 3 seconds to load on an international server will lose 50% of its potential leads before they even see the logo."
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>IV. Step-by-Step Development Workflow</h2>
+      <p>To ensure project success, follow this sequence:</p>
+      <ol>
+        <li><strong>Wireframing:</strong> Low-fidelity sketches of the layout (UX).</li>
+        <li><strong>Visual Identity:</strong> Applying the "Graphic Elements" (UI) – Colors, Typography, Posters.</li>
+        <li><strong>CMS Implementation:</strong> Building the pages and setting up the navigation.</li>
+        <li><strong>SEO Basics:</strong> Meta titles, descriptions, and Alt-tags for images in both languages.</li>
+        <li><strong>Quality Assurance (QA):</strong> Testing every link and form on multiple browsers.</li>
+      </ol>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>LAS 2.02 • Module 02 Development Material</p>
+    <p>© 2026 Academic Portal • Dr. Farid Portfolio</p>
+  </footer>
+
+</body>
+</html>

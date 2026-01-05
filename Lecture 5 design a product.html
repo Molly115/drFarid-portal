@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masterclass 05: Project Management & Acceptance</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #10b981; /* Green for Success/Completion */
+      --accent: #3b82f6;
+      --text: #334155;
+      --light-bg: #f0fdf4; /* Subtle green-white tint */
+    }
+
+    body {
+      margin: 0; font-family: 'Segoe UI', sans-serif;
+      background-color: #f8fafc; color: var(--text); line-height: 1.8;
+    }
+
+    /* HEADER */
+    .hero {
+      height: 55vh;
+      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), 
+                  url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1600') center/cover fixed;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      color: white; text-align: center; padding: 40px;
+    }
+
+    .hero h1 { font-size: 3.2rem; margin: 0; border-bottom: 5px solid var(--secondary); padding-bottom: 15px; }
+    .hero p { font-size: 1.2rem; max-width: 850px; margin-top: 20px; opacity: 0.9; }
+
+    /* CONTENT LAYOUT */
+    .container { max-width: 1100px; margin: -60px auto 100px; padding: 0 20px; }
+
+    .lecture-card {
+      background: white; border-radius: 30px; padding: 60px;
+      margin-bottom: 50px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+      border: 1px solid #dcfce7;
+    }
+
+    h2 { font-size: 2.1rem; color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 15px; }
+    h2::before { content: "🏁"; font-size: 1.5rem; }
+    
+    h3 { color: var(--primary); font-size: 1.5rem; margin-top: 40px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9; }
+
+    /* MANAGEMENT TOOLS GRID */
+    .mgmt-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;
+    }
+
+    .mgmt-item {
+      background: #f8fafc; border: 1px solid #e2e8f0; padding: 25px; border-radius: 15px;
+    }
+
+    .mgmt-item b { color: var(--accent); display: block; margin-bottom: 8px; font-size: 1.1rem; }
+
+    .doctor-advice {
+      background: #f0fdf4; border-left: 10px solid var(--secondary);
+      padding: 30px; margin: 40px 0; border-radius: 0 20px 20px 0;
+    }
+
+    .pitch-box {
+      background: #1e293b; color: #f8fafc; padding: 40px; border-radius: 25px; margin-top: 30px;
+    }
+
+    .pitch-box h4 { color: var(--secondary); margin-top: 0; font-size: 1.4rem; }
+
+    footer { background: #0f172a; color: white; padding: 40px; text-align: center; }
+
+    @media (max-width: 850px) { .hero h1 { font-size: 2rem; } .lecture-card { padding: 30px; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Module 05: Project Management & Acceptance</h1>
+    <p>Closing the Loop: Budgeting, Tenders, and the Professional Pitch to Sponsors</p>
+  </header>
+
+  <div class="container">
+
+    <section class="lecture-card">
+      <h2>I. Managing the Call for Tenders (Appel d'Offres)</h2>
+      <p>In a real agency, projects don't just "appear." You must fight for them. This module leads students through the process of responding to a client's request for proposal.</p>
+      
+      <div class="mgmt-grid">
+        <div class="mgmt-item">
+          <b>1. Analysis of the Ask</b>
+          <p>Carefully reading the sponsor's needs. What are their hidden "pain points"? What is their real budget?</p>
+        </div>
+        <div class="mgmt-item">
+          <b>2. The Financial Bid</b>
+          <p>Calculating the "cost of production." This includes labor hours, software licenses, and media ad-spend for the international launch.</p>
+        </div>
+        <div class="mgmt-item">
+          <b>3. The Competitive Edge</b>
+          <p>What makes your agency's proposal better than others? (Technical skill? Cultural insight? Legal safety?)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>II. Planning & Monitoring Documents</h2>
+      <p>Project management is the art of controlling three variables: **Time, Quality, and Money**. If you change one, the others will shift.</p>
+
+      <h3>The Essential Dashboard</h3>
+      <ul>
+        <li><strong>Gantt Chart:</strong> Visualizing the timeline. If the filming in Module 04 is delayed, how does it affect the Website Launch in Module 02?</li>
+        <li><strong>Budget Tracking:</strong> Monitoring every Euro/Dollar spent to ensure the SME doesn't go bankrupt.</li>
+        <li><strong>Risk Register:</strong> Identifying what could go wrong (e.g., technical server failure, legal copyright dispute) and having a Plan B.</li>
+      </ul>
+      
+      
+    </section>
+
+    <section class="lecture-card">
+      <h2>III. Presenting the Progress Report</h2>
+      <p>Communication is not just what you *make*, it's how you *sell* it. Students must present their progress to the sponsors (professors/clients).</p>
+
+      <div class="pitch-box">
+        <h4>The "Perfect Pitch" Structure:</h4>
+        <ol>
+          <li><strong>The Hook:</strong> Remind the client of the problem you solved.</li>
+          <li><strong>The Demo:</strong> Show the showcase site and the creative assets.</li>
+          <li><strong>The Results:</strong> Explain how the international campaign strategy will work.</li>
+          <li><strong>The Legal Shield:</strong> Confirm that all production files and rights are secured.</li>
+        </ol>
+      </div>
+
+      <div class="doctor-advice">
+        <strong>Dr. Farid's Closing Wisdom:</strong> "In a professional context, a project is only successful when the sponsor says 'Yes' to the final delivery. The <em>Procès-Verbal de Recette</em> (Acceptance Report) is your most important document—it signals that you have met your contractual obligations."
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>IV. The Final Acceptance (La Recette)</h2>
+      <p>The course concludes with the formal "Acceptance of the Project." Students deliver a final report that includes:</p>
+      <ul>
+        <li>The live link to the international showcase website.</li>
+        <li>The complete "Production Bible" (Legal and Creative).</li>
+        <li>The final budget vs. initial estimate analysis.</li>
+        <li>A reflection on the "Targeted Competencies" (Design, Express, Develop, Undertake).</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>LAS 2.02 • Final Module: Management & Closing</p>
+    <p>© 2026 Academic Portal • Dr. Farid Portfolio</p>
+  </footer>
+
+</body>
+</html>

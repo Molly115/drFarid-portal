@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LAS 2.02 • Design & Communication</title>
+  <style>
+    /* ========== GLOBAL & THEME ========== */
+    body { 
+      margin: 0; 
+      font-family: "Segoe UI", sans-serif; 
+      background: linear-gradient(180deg, #e9efff 0%, #dde6ff 100%); 
+      color: #1e293b; 
+    }
+
+    .navbar { 
+      background: rgba(245,248,255,0.95); 
+      backdrop-filter: blur(10px); 
+      padding: 18px 40px; 
+      border-bottom: 1px solid #c7d4ff; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+    }
+    .nav-left { display: flex; align-items: center; gap: 15px; }
+    .logo { width: 42px; height: 42px; object-fit: contain; }
+    .navbar h2 { margin: 0; color: #183aa8; }
+
+    .hero { text-align: center; padding: 90px 20px 70px; }
+    .hero h1 { 
+      font-size: 44px; 
+      background: linear-gradient(90deg,#183aa8,#2f55d4); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+    }
+    .hero p { margin-top: 12px; color: #334155; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+    /* ========== TIMELINE LAYOUT ========== */
+    .block { width: 80%; margin: 0 auto 120px; }
+    .timeline { position: relative; }
+    .timeline::before { 
+      content: ""; 
+      position: absolute; 
+      left: 28px; 
+      top: 0; 
+      bottom: 0; 
+      width: 2px; 
+      background: linear-gradient(#1f4ed8, #5f8cff); 
+    }
+
+    .module { 
+      display: flex; 
+      gap: 40px; 
+      margin-bottom: 70px; 
+      position: relative; 
+      align-items: flex-start; 
+    }
+
+    /* THE CORRECT CIRCLE STYLE */
+    .module-number { 
+      min-width: 60px; 
+      height: 60px; 
+      background: linear-gradient(135deg, #1f4ed8, #3f63ff); 
+      border-radius: 50%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: bold; 
+      color: #ffffff; 
+      box-shadow: 0 6px 14px rgba(31,78,216,0.45); 
+      font-size: 18px; 
+      z-index: 2;
+    }
+
+    .module-content { 
+      background: #f9fbff; 
+      border: 1px solid #c7d4ff; 
+      border-radius: 18px; 
+      padding: 30px; 
+      width: 100%; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 30px; 
+      transition: transform 0.3s ease; 
+    }
+    .module-content:hover { 
+      transform: translateY(-6px); 
+      box-shadow: 0 14px 28px rgba(31,78,216,0.18); 
+    }
+
+    .module-text { flex: 1; }
+    .module-text h3 { margin-top: 0; color: #1e3a8a; font-size: 22px; }
+    .module-text p { margin-bottom: 0; color: #475569; font-size: 0.95rem; }
+
+    .module-btn { 
+      display: inline-block; 
+      padding: 12px 22px; 
+      background: linear-gradient(135deg, #1f4ed8, #3f63ff); 
+      color: #ffffff; 
+      border-radius: 10px; 
+      text-decoration: none; 
+      font-weight: 600; 
+      white-space: nowrap;
+    }
+
+    .footer { padding: 30px; text-align: center; background: #e4ebff; color: #334155; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/logo.jpeg" alt="Logo" class="logo">
+    <h2>LAS 2.02 • Design & Communication</h2>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Design a product or service<br>and its communication</h1>
+  <p>Mobilizing resources to design, develop, and undertake communication campaigns for international audiences in SME and agency contexts.</p>
+</header>
+
+<section class="block">
+  <div class="timeline">
+
+    <div class="module">
+      <span class="module-number">01</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Conception & Market Innovation</h3>
+          <p>Imagine innovative products. Creating design briefs, value propositions, and marketing targeting for global tourism and international SME sectors.</p>
+        </div>
+        <a href="Lecture1 design a product.html" class="module-btn">Explore Design</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">02</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Digital Presence & CMS Development</h3>
+          <p>Designing a showcase website as a communications medium. Setting up websites using modern CMS tools for international audience accessibility.</p>
+        </div>
+        <a href="Lecture 2 design a product.html" class="module-btn">Open Web Lab</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">03</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Communication Campaign Strategy</h3>
+          <p>Planning international campaigns, social network presence, and creating adapted graphic/audiovisual elements for French and foreign targets.</p>
+        </div>
+        <a href="Lecture 3 design a product.html" class="module-btn">View Strategy</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">04</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Legal Compliance & Production Files</h3>
+          <p>Correct application of digital law (CGU, copyright, image rights). Writing scripts, notes of intent, and managing filming authorizations.</p>
+        </div>
+        <a href="Lecture 4 design a product.html" class="module-btn">Review Laws</a>
+      </div>
+    </div>
+
+    <div class="module">
+      <span class="module-number">05</span>
+      <div class="module-content">
+        <div class="module-text">
+          <h3>Project Management & Acceptance</h3>
+          <p>Managing call for tenders, budgeting, and planning documents. Presenting progress reports and finalizing the project for sponsors.</p>
+        </div>
+        <a href="Lecture 5 design a product.html" class="module-btn">Manage Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  LAS 2.02 Course Material – Design, Express, Develop, Undertake
+</footer>
+
+</body>
+</html> 

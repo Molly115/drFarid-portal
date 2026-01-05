@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masterclass 03: Communication Campaign Strategy</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #2563eb;
+      --accent: #f59e0b; /* Orange for Energy/Strategy */
+      --text: #1e293b;
+      --light-bg: #f8fafc;
+    }
+
+    body {
+      margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg); color: var(--text); line-height: 1.8;
+    }
+
+    /* HEADER */
+    .hero {
+      height: 55vh;
+      background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                  url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1600') center/cover fixed;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      color: white; text-align: center; padding: 40px;
+    }
+
+    .hero h1 { font-size: 3.2rem; margin: 0; border-bottom: 5px solid var(--accent); padding-bottom: 15px; }
+    .hero p { font-size: 1.2rem; max-width: 850px; margin-top: 20px; opacity: 0.9; }
+
+    /* CONTENT LAYOUT */
+    .container { max-width: 1100px; margin: -60px auto 100px; padding: 0 20px; }
+
+    .lecture-card {
+      background: white; border-radius: 30px; padding: 60px;
+      margin-bottom: 50px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+    }
+
+    h2 { font-size: 2.1rem; color: var(--primary); margin-top: 0; border-left: 8px solid var(--accent); padding-left: 20px; }
+    h3 { color: var(--secondary); font-size: 1.5rem; margin-top: 40px; }
+
+    /* STRATEGY BLOCKS */
+    .strategy-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0;
+    }
+
+    .strategy-item {
+      background: #fffcf5; border: 1px solid #fef3c7; padding: 25px;
+      border-radius: 15px; position: relative;
+    }
+
+    .strategy-item b { color: var(--accent); font-size: 1.2rem; display: block; margin-bottom: 10px; }
+
+    .doctor-callout {
+      background: #eff6ff; border-radius: 20px; padding: 35px;
+      margin: 40px 0; border: 1px dashed var(--secondary);
+    }
+
+    .channel-table {
+      width: 100%; border-collapse: collapse; margin: 30px 0;
+    }
+    .channel-table th, .channel-table td {
+      padding: 15px; border: 1px solid #e2e8f0; text-align: left;
+    }
+    .channel-table th { background: #f1f5f9; color: var(--primary); }
+
+    footer { background: #0f172a; color: white; padding: 40px; text-align: center; }
+
+    @media (max-width: 850px) { .hero h1 { font-size: 2rem; } .lecture-card { padding: 30px; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Module 03: Communication Campaign Strategy</h1>
+    <p>Designing the Roadmap: Multi-Channel Execution for International Markets</p>
+  </header>
+
+  <div class="container">
+
+    <section class="lecture-card">
+      <h2>I. The Integrated Communication Plan (ICP)</h2>
+      <p>A campaign is not a single post; it is a synchronized series of messages. For SMEs with international ambitions, the ICP must balance **Global Consistency** with **Local Relevance**.</p>
+      
+      <h3>1. Defining Campaign Objectives</h3>
+      <p>We use the <strong>AIDA Model</strong> to determine where our target audience is in their journey:</p>
+      <ul>
+        <li><strong>Attention:</strong> Making the international market aware of the new SME service.</li>
+        <li><strong>Interest:</strong> Highlighting unique features (the Value Prop from Module 01).</li>
+        <li><strong>Desire:</strong> Creating an emotional connection through storytelling.</li>
+        <li><strong>Action:</strong> Driving them to the showcase site (built in Module 02) to convert.</li>
+      </ul>
+      
+    </section>
+
+    <section class="lecture-card">
+      <h2>II. Channel Selection: Where to Play?</h2>
+      <p>An international audience consumes media differently depending on their region and professional sector.</p>
+
+      <table class="channel-table">
+        <thead>
+          <tr>
+            <th>Channel Type</th>
+            <th>Platform Example</th>
+            <th>International Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Owned Media</strong></td>
+            <td>Showcase Website / Blog</td>
+            <td>The "Home Base" where legal and detailed info lives.</td>
+          </tr>
+          <tr>
+            <td><strong>Paid Media</strong></td>
+            <td>Social Ads (Meta, LinkedIn)</td>
+            <td>Reaching specific geographic segments (e.g., targeting tourists in the UK).</td>
+          </tr>
+          <tr>
+            <td><strong>Earned Media</strong></td>
+            <td>PR / Influencers</td>
+            <td>Building trust through third-party validation in local languages.</td>
+          </tr>
+          <tr>
+            <td><strong>Shared Media</strong></td>
+            <td>Social Networks</td>
+            <td>Engagement, community building, and "Viral" potential.</td>
+          </tr>
+        </tbody>
+      </table>
+      
+
+      <div class="doctor-callout">
+        <strong>Dr. Farid's Strategic Insight:</strong> "In the tourism sector, visual channels like Instagram or Pinterest are for 'The Dream,' while LinkedIn or Email is for 'The Trust.' Never use the same message for both."
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>III. Social Media Strategy for SMEs</h2>
+      <p>SMEs cannot be everywhere. We must choose channels based on our **Personas**.</p>
+      
+      <div class="strategy-grid">
+        <div class="strategy-item">
+          <b>The Content Calendar</b>
+          <p>Planning 4 weeks of posts in advance. Consistency is more important than frequency for international SEO.</p>
+        </div>
+        <div class="strategy-item">
+          <b>Engagement Rules</b>
+          <p>How do we respond to international comments? Establishing a "Community Management" guide to handle diverse cultural tones.</p>
+        </div>
+        <div class="strategy-item">
+          <b>Visual Continuity</b>
+          <p>Ensuring that posters, graphic elements, and videos all share the same "Graphic Charter" across all platforms.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lecture-card">
+      <h2>IV. The Communications Roadmap</h2>
+      <p>Executing the campaign requires three distinct phases:</p>
+      <ol>
+        <li><strong>The Teasing Phase (Pre-Launch):</strong> Building mystery and collecting early-interest emails.</li>
+        <li><strong>The Launch Phase:</strong> High-intensity posting, ad spending, and PR outreach.</li>
+        <li><strong>The Maintenance Phase:</strong> Long-term content (blogs, testimonials) to keep the SEO rankings high on the CMS site.</li>
+      </ol>
+
+      <h3>Key Deliverable: The Media Mix Chart</h3>
+      <p>Students must produce a table showing exactly which content goes on which channel, at what time, and for which target audience.</p>
+      
+    </section>
+
+  </div>
+
+  <footer>
+    <p>LAS 2.02 • Module 03 Strategy Lab</p>
+    <p>© 2026 Academic Portal • Dr. Farid Portfolio</p>
+  </footer>
+
+</body>
+</html>

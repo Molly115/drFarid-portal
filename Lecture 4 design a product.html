@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masterclass 04: Legal Compliance & Production Files</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #dc2626; /* Red for Legal/Rules */
+      --accent: #ef4444;
+      --text: #1e293b;
+      --light-bg: #fffafa; /* Subtle red-white tint */
+    }
+
+    body {
+      margin: 0; font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-bg); color: var(--text); line-height: 1.8;
+    }
+
+    /* HEADER */
+    .hero {
+      height: 55vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                  url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1600') center/cover fixed;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      color: white; text-align: center; padding: 40px;
+    }
+
+    .hero h1 { font-size: 3.2rem; margin: 0; border-bottom: 5px solid var(--secondary); padding-bottom: 15px; }
+    .hero p { font-size: 1.2rem; max-width: 850px; margin-top: 20px; opacity: 0.9; }
+
+    /* CONTENT LAYOUT */
+    .container { max-width: 1100px; margin: -60px auto 100px; padding: 0 20px; }
+
+    .lecture-card {
+      background: white; border-radius: 30px; padding: 60px;
+      margin-bottom: 50px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1);
+      border: 1px solid #fee2e2;
+    }
+
+    h2 { font-size: 2.1rem; color: var(--primary); margin-top: 0; display: flex; align-items: center; gap: 15px; }
+    h2::before { content: "LAW"; font-size: 0.8rem; background: var(--secondary); color: white; padding: 5px 12px; border-radius: 8px; }
+    
+    h3 { color: var(--primary); font-size: 1.5rem; margin-top: 40px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+
+    /* LEGAL BOXES */
+    .legal-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;
+    }
+
+    .legal-item {
+      background: #fef2f2; border: 1px solid #fecaca; padding: 25px; border-radius: 15px;
+    }
+
+    .legal-item b { color: var(--secondary); display: block; margin-bottom: 8px; font-size: 1.1rem; }
+
+    .file-icon-list {
+      list-style: none; padding: 0;
+    }
+    .file-icon-list li {
+      background: #f8fafc; margin-bottom: 10px; padding: 15px 20px; border-radius: 10px;
+      display: flex; align-items: center; gap: 15px; border: 1px solid #e2e8f0;
+    }
+    .file-icon-list li::before { content: "📄"; font-size: 1.2rem; }
+
+    .doctor-warning {
+      background: #fefce8; border: 2px solid #facc15; padding: 35px;
+      border-radius: 20px; margin: 40px 0;
+    }
+
+    footer { background: #0f172a; color: white; padding: 40px; text-align: center; }
+
+    @media (max-width: 850px) { .hero h1 { font-size: 2rem; } .lecture-card { padding: 30px; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Module 04: Legal Compliance & Production Files</h1>
+    <p>The "Invisible Shield": Securing your International Project through Rigorous Law and Documentation</p>
+  </header>
+
+  <div class="container">
+
+    <section class="lecture-card">
+      <h2>I. The Three Pillars of Creative Law</h2>
+      <p>When you design a campaign for an international SME, you are handling intellectual property. Ignorance of the law is never an excuse.</p>
+      
+      <div class="legal-grid">
+        <div class="legal-item">
+          <b>1. Copyright (Droit d'Auteur)</b>
+          <p>Every image, song, and font you use must be licensed. Using a "random Google image" can result in a copyright strike or fine.</p>
+        </div>
+        <div class="legal-item">
+          <b>2. Image Rights (Droit à l'Image)</b>
+          <p>If a human face appears in your video or poster, you MUST have a signed authorization form, especially in the EU (GDPR compliance).</p>
+        </div>
+        <div class="legal-item">
+          <b>3. Terms of Use (CGU)</b>
+          <p>The showcase site from Module 02 must have a "Legal Mentions" page defining who is responsible for the data collected.</p>
+        </div>
+      </div>
+      
+      
+    </section>
+
+    <section class="lecture-card">
+      <h2>II. Professional Production Files</h2>
+      <p>In a professional agency, "production" starts with a file, not a camera. This file proves to the client (SME) that the project is planned and authorized.</p>
+
+      <h3>1. The Script & Note of Intent</h3>
+      <p>The <strong>Note of Intent</strong> explains the "Creative Soul" of the video or poster. It justifies why you chose certain colors, actors, or settings for the international target.</p>
+      
+      <h3>2. Essential Documents List</h3>
+      <ul class="file-icon-list">
+        <li><strong>Work Plan:</strong> A minute-by-minute schedule of the filming or design process.</li>
+        <li><strong>Filming Authorization:</strong> Legal permission to record in specific public or private locations.</li>
+        <li><strong>Talent Release Forms:</strong> Contracts signed by models/actors giving permission to use their image globally.</li>
+        <li><strong>Storyboard:</strong> The visual translation of the script to prevent wasted time on set.</li>
+      </ul>
+      
+      
+    </section>
+
+    <section class="lecture-card">
+      <h2>III. Global Regulatory Standards</h2>
+      <p>Because your audience is international, you must respect the strictest laws (usually GDPR in Europe) to ensure the site is safe worldwide.</p>
+      
+      <div class="doctor-warning">
+        <strong>Dr. Farid's Legal Insight:</strong> "Law is not a barrier to creativity; it is a framework for safety. A professional communicator knows that a project is only as strong as its weakest contract. Always document your licenses!"
+      </div>
+
+      <h3>Key Focus: The GDPR (RGPD)</h3>
+      <p>If your showcase site has a contact form, you must tell users:</p>
+      <ul>
+        <li>What data is being collected.</li>
+        <li>How long it is stored.</li>
+        <li>Who has access to it.</li>
+      </ul>
+    </section>
+
+    <section class="lecture-card">
+      <h2>IV. Organizing the Archive</h2>
+      <p>At the end of this module, students must deliver a "Production Bible." This is a single PDF or folder containing:</p>
+      <ol>
+        <li>All signed legal authorizations.</li>
+        <li>The full technical script.</li>
+        <li>The budget breakdown for the creative assets.</li>
+        <li>The note of intent for the international strategy.</li>
+      </ol>
+      <p>This folder is what makes the difference between an amateur "student project" and a professional "agency delivery."</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>LAS 2.02 • Module 04 Legal & Production Library</p>
+    <p>© 2026 Academic Portal • Dr. Farid Portfolio</p>
+  </footer>
+
+</body>
+</html>
